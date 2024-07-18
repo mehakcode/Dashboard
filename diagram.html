@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagram</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div class="nave-bar">
+        <div class="brand">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" />
+            </svg>
+            <h2>Coca</h2>
+            <hr id="horizontal-row">
+            <h3 id="h3">Dashboard</h3>
+        </div>
+        <!-- ************button-box************* -->
+        <div class="button-box">
+            <div id="nav-btn">
+                <span class="button">
+                    <img src="./Assets/walk.svg" alt="">
+                    Walk-in
+                </span>
+                <span class="button">
+                    <img src="./Assets/dine in.svg" alt="">
+                    Dine-In
+                </span>
+            </div>
+            <div class="profile">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <!-- ************left-nav ************* -->
+
+        <div class="left-nave">
+            <div class="icons">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd"
+                            d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd"
+                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path
+                            d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                        <path fill-rule="evenodd"
+                            d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd"
+                            d="M5.478 5.559A1.5 1.5 0 0 1 6.912 4.5H9A.75.75 0 0 0 9 3H6.912a3 3 0 0 0-2.868 2.118l-2.411 7.838a3 3 0 0 0-.133.882V18a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3v-4.162c0-.299-.045-.596-.133-.882l-2.412-7.838A3 3 0 0 0 17.088 3H15a.75.75 0 0 0 0 1.5h2.088a1.5 1.5 0 0 1 1.434 1.059l2.213 7.191H17.89a3 3 0 0 0-2.684 1.658l-.256.513a1.5 1.5 0 0 1-1.342.829h-3.218a1.5 1.5 0 0 1-1.342-.83l-.256-.512a3 3 0 0 0-2.684-1.658H3.265l2.213-7.191Z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M12 2.25a.75.75 0 0 1 .75.75v6.44l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 1.06-1.06l1.72 1.72V3a.75.75 0 0 1 .75-.75Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- ************side-bar ************* -->
+
+        <div class="side-bar">
+            <div id="sb-icons">
+                <div id="text-icons">
+                    <img class="img-icon" src="./Assets/summery.svg" alt="">
+                    Sales
+                </div>
+                <div>
+                    <img class="img-icon" src="./Assets/marketing.svg" alt="">
+                    Marketing
+                </div>
+                <div>
+                    <img class="img-icon" src="./Assets/notepad.svg" alt="">
+                    Business Summary
+                </div>
+                <div>
+                    <img class="img-icon" src="./Assets/saved reports.svg" alt="">
+                    Saved Reports
+                </div>
+                <div>
+                    <img class="img-icon" src="./Assets/feedback.svg" alt="">
+                    Feedbacks
+                </div>
+            </div>
+        </div>
+        <!-- ************dash-bord ************* -->
+
+        <div class="dash-bord">
+            <!-- ************selector************* -->
+            <div class="selector">
+                <div class="select-box">
+                    <div>
+                        <select id="box">
+                            <option value="5">
+                                Select Country
+                            </option>
+                        </select>
+                    </div>
+                    <div><select id="box">
+                            <option value="5">
+                                Cities
+                            </option>
+                        </select></div>
+                    <div class="box"><select id="box">
+                            <option value="5">
+                                Multi-Location
+                            </option>
+                        </select></div>
+                    <div><select id="box">
+                            <option value="5">
+                                Walk-In
+                            </option>
+                        </select></div>
+                </div>
+                <div class="timing">
+                    <!-- <img src="./Assets/calender.svg" alt=""> -->
+                    <input class="Calendar" type="datetime-local" id="">
+                    </input>
+                    <!-- <span>Today : Apr 25, 2018 12:00 AM - Apr 26, 2018 12:00 AM</span> -->
+                </div>
+            </div>
+            <!-- ************4 sale boxes ************* -->
+            <div class="order-report">
+                <div class="Report-box">
+                    <div class="total-orders">
+                        <svg width="25px" height="25px" viewBox="0 0 28 28" stroke="currentColor" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 10.25C8 9.83579 8.33579 9.5 8.75 9.5H18.75C19.1642 9.5 19.5 9.83579 19.5 10.25C19.5 10.6642 19.1642 11 18.75 11H8.75C8.33579 11 8 10.6642 8 10.25Z"
+                                fill="currentColor" />
+                            <path
+                                d="M8 14.75C8 14.3358 8.33579 14 8.75 14H18.75C19.1642 14 19.5 14.3358 19.5 14.75C19.5 15.1642 19.1642 15.5 18.75 15.5H8.75C8.33579 15.5 8 15.1642 8 14.75Z"
+                                fill="currentColor" />
+                            <path
+                                d="M8.75 18.5C8.33579 18.5 8 18.8358 8 19.25C8 19.6642 8.33579 20 8.75 20H13.25C13.6642 20 14 19.6642 14 19.25C14 18.8358 13.6642 18.5 13.25 18.5H8.75Z"
+                                fill="none" />
+                            <path
+                                d="M14 2C14.4142 2 14.75 2.33579 14.75 2.75V4H18.5V2.75C18.5 2.33579 18.8358 2 19.25 2C19.6642 2 20 2.33579 20 2.75V4H20.75C21.9926 4 23 5.00736 23 6.25V19.2459C23 19.4448 22.921 19.6356 22.7803 19.7762L17.2762 25.2803C17.1355 25.421 16.9447 25.5 16.7458 25.5H6.75C5.50736 25.5 4.5 24.4926 4.5 23.25V6.25C4.5 5.00736 5.50736 4 6.75 4H8V2.75C8 2.33579 8.33579 2 8.75 2C9.16421 2 9.5 2.33579 9.5 2.75V4H13.25V2.75C13.25 2.33579 13.5858 2 14 2ZM6 6.25V23.25C6 23.6642 6.33579 24 6.75 24H15.9958V20.7459C15.9958 19.5032 17.0032 18.4959 18.2458 18.4959H21.5V6.25C21.5 5.83579 21.1642 5.5 20.75 5.5H6.75C6.33579 5.5 6 5.83579 6 6.25ZM18.2458 19.9959C17.8316 19.9959 17.4958 20.3317 17.4958 20.7459V22.9394L20.4393 19.9959H18.2458Z"
+                                fill="currentColor" />
+                        </svg>
+                        <h3>Total orders</h3>
+                    </div>
+                    <h1>342</h1>
+                    <div>
+                        <span class="profit-rate">
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19M12 5L6 11M12 5L18 11" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>4.2%</span>
+                        </span>
+                        <span class="profit-text"> from last month</span>
+                    </div>
+
+                    <div class="view-details">
+                        View detail
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Report-box">
+                    <div class="total-orders">
+                        <svg width="25px" height="25px" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                        </svg>
+
+                        <h3>Total sales</h3>
+                    </div>
+                    <h1>$1,290</h1>
+                    <div>
+                        <span class="profit-rate">
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19M12 5L6 11M12 5L18 11" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>2.2%</span>
+                        </span>
+                        <span class="profit-text"> from last month</span>
+                    </div>
+
+                    <div class="view-details">
+                        View detail
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Report-box">
+                    <div class="total-orders">
+                        <svg width="25px" height="25px" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                        </svg>
+
+                        <h3>Net sales</h3>
+                    </div>
+                    <h1>$1,940</h1>
+                    <div>
+                        <span class="profit-rate">
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19M12 5L6 11M12 5L18 11" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>4.0%</span>
+                        </span>
+                        <span class="profit-text"> from last month</span>
+                    </div>
+
+                    <div class="view-details">
+                        View detail
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Report-box">
+                    <div class="Cancelled-orders">
+                        <svg width="25px" height="25px" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+
+                        <h3>Cancelled orders</h3>
+                    </div>
+                    <h1>12</h1>
+                    <div>
+                        <span class="lose-rate">
+                            <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                            </svg>
+
+                            <span>1.%</span>
+                        </span>
+                        <span class="lose-text"> from last month</span>
+                    </div>
+
+                    <div class="view-details">
+                        View detail
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- ************graph-area ************* -->
+            <div class="graph-containar">
+                <h3 id="title">Selected location
+                </h3>
+                <div class="order-sale">
+                    <div class="sale-box1">
+                        <span class="heading">Coffeetalk</span>
+                        <div class="sale">
+                            <h2>
+                                $1,432
+                            </h2>
+                            <span id="grade">
+                                +3%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="sale-box2">
+                        <span class="heading">Low n slow </span>
+                        <div class="sale">
+                            <h2>
+                                $1,432
+                            </h2>
+                            <span id="grade">
+                                +3%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="sale-box3">
+                        <span class="heading">Cold 'n brew
+                        </span>
+                        <div class="sale">
+                            <h2>
+                                $1,432
+                            </h2>
+                            <span id="grade">
+                                +3%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="sale-box4">
+                        <span class="heading">Eplus space </span>
+                        <div class="sale">
+                            <h2>
+                                $1,432
+                            </h2>
+                            <span id="grade">
+                                +3%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="sale-box5">
+                        <span class="heading">Sinergy space </span>
+                        <div class="sale">
+                            <h2>
+                                $1,432
+                            </h2>
+                            <span id="grade">
+                                +3%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
